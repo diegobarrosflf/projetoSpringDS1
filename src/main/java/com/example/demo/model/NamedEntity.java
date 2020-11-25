@@ -2,6 +2,9 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public abstract class NamedEntity extends BaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
