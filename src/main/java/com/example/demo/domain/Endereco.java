@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.example.demo.model.BaseEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Endereco extends BaseEntity implements Serializable {
@@ -18,6 +19,7 @@ public class Endereco extends BaseEntity implements Serializable {
 	private String bairro;
 	private String cep;
 
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "cliente_id")
 	private Cliente cliente;
